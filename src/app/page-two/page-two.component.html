@@ -1,2 +1,10 @@
-<p>page-two works!</p>
-<a routerLink="../page-one">Aller a la page 1</a>
+<h2>List de tache pour l'utilisateur {{ user.nom }}</h2>
+
+<ul>
+    @for (task of user.taskList; track task.id) {
+        <li>
+            <p>{{ task.nom }}</p>
+            <p>{{ task.description }}</p>
+        </li>
+    }
+</ul>

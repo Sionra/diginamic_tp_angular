@@ -1,0 +1,8 @@
+<h2>Liste Utilisateur</h2>
+
+@for (user of users; track user.id) {
+    <div>
+        <p>{{ user.nom }} {{ user.prenom }} | ✉ {{ user.email }}</p>
+        <button (click)="viewTask(user)">List des tâches</button>
+    </div>
+}
